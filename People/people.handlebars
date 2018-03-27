@@ -1,0 +1,33 @@
+<h1>Current people:</h1>
+
+<table>
+    <thead> 
+        <th>First Name</th> 
+        <th>Last Name</th> 
+        <th>Date of Birth</th>
+        <th>Hometown</th>  
+    </thead> 
+    <tbody> 
+        {{#each people}} 
+        <tr> 
+            <td>{{first_name}}</td> 
+            <td>{{last_name}}</td> 
+            <td>{{dob}}</td> 
+            <td>{{hometown}}</td>
+            <td><button onclick="deletePeople({{people_id}})">Delete</button></td>
+            <td><a href="/people/{{people_id}}">Update</a></td>
+        </tr> 
+        {{/each}} 
+    </tbody> 
+    <form id="addperson" action="/people" method="post">
+    First name: <input type="text" name="first_name"><br>
+    Last name: <input type="text" name="last_name"><br>
+    Date of Birth: <input type="date" name="dob"><br>	
+    Hometown: <select name="hid"> 
+        {{#each hometown}}
+        <option value="{{hometown_id}}">{{city_name}}</option>
+        {{/each}}
+    </select><br>
+    <input type="submit" value="Submit">
+    </form>
+</table> 

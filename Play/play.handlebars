@@ -1,0 +1,31 @@
+<h1>Current People and their Instruments </h1>
+
+<table>
+	<thead>
+		<th> Instrument Name </th>
+		<th> Musician Name </th>
+	</thead>
+	<tbody>
+		{{#each play}}
+		<tr>
+			<td>{{Instruments}}</td>
+			<td>{{Musicians}}</td>
+			<td><button onclick="deletePlay({{iid}},{{pid}})"> Delete</button></td>
+			<td><a href="/play/{{iid}}-{{pid}}">Update</a></td>
+		</tr>
+		{{/each}}
+	</tbody>
+	<form id="addPlay" action="/play" method="post">
+	Instrument Name: <select name="iid">
+		{{#each instruments}}
+		<option value="{{instruments_id}}">{{name}}</option>
+		{{/each}}
+	</select><br>	
+	Musician Name: <select name="pid">
+		{{#each people}}
+		<option value="{{people_id}}">{{first_name}} {{last_name}}</option>
+		{{/each}}
+	</select><br>
+	<input type="submit" value="Submit">
+	</form>
+</table>	

@@ -1,0 +1,24 @@
+<h1> Current Genres: </h1>
+
+<table>
+	<thead>
+		<th>Genre name</th>
+		<th> Era </th>
+	</thead> 
+	<tbody>
+		{{#each genres}}
+		<tr>
+			<td>{{name}}</td>
+			<td>{{era}}</td>
+		</tr>
+		{{/each}}
+	</tbody>
+	<form id="addGenres" action="/genres" method="post">
+	Genre name: <input type="text" name="name"><br>
+	Era name: <input type="text" name="era"><br>
+	<input type="submit" value="Submit">
+	<input type="submit" value="Filter">
+	</form>
+	<br> 
+</table>
+

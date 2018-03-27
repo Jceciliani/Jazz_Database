@@ -1,0 +1,16 @@
+<h1> Filtered Genres by: {{genres.era}} </h1>
+
+<table>
+	<thead>
+		<th>Genre name</th>
+		<th> Era </th>
+	</thead> 
+	<tbody>
+		{{#each genres}}
+		<tr>
+			<td>{{name}}</td>
+			<td>{{era}}</td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>

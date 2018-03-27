@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+	<div class="links">
+	<ul>
+		<li><a href="http://flip3.engr.oregonstate.edu:19533/people">People</a></li>
+		<li><a href="http://flip3.engr.oregonstate.edu:19533/instruments">Instruments</a></li>
+		<li><a href="http://flip3.engr.oregonstate.edu:19533/genres">Genres</a></li>
+		<li><a href="http://flip3.engr.oregonstate.edu:19533/hometown">Hometowns</a></li>
+		<li><a href="http://flip3.engr.oregonstate.edu:19533/play">Play</a></li>
+		<li><a href="http://flip3.engr.oregonstate.edu:19533/play_in">Play In</a></li>
+	</ul>
+	</div>
+
+
+	<title>JAZZ DATABASE</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	{{#each jsscripts}}
+	<script src="/static/{{this}}"></script>
+	{{/each}} 
+
+	<style>
+div.links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+div.links li {
+    float: left;
+}
+
+div.links li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+div.links li a:hover {
+    background-color: #111;
+}
+
+body {
+	background-image: url('https://cdn.wallpapersafari.com/37/54/kToz0c.jpg');
+}
+</style> 
+
+
+</head>
+<body>
+	{{{body}}}
+</body>
+</html>

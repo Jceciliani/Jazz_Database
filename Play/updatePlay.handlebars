@@ -1,0 +1,20 @@
+<h1>Update {{play.iid}} {{play.pid}}: </h1>
+
+<form id="updatePlay" action="/play" method="post">
+
+	Instrument Name: <select name="iid">
+		{{#each instruments}}
+		<option value="{{instruments_id}}">{{name}}</option>
+		{{/each}}}
+	</select><br>	
+	Musician Name: <select name="pid">
+		{{#each people}}
+		<option value="{{people_id}}">{{first_name}}</option>
+		{{/each}}
+	</select><br>
+	<input type="submit" value="Submit">
+</form>
+
+<button onclick="updatePlay({{play.iid}} {{play.pid}})">Update</button>
+<script defer>selectInstrument({{play.iid}});</script>
+<script defer>selectPerson({{play.pid}});</script> 

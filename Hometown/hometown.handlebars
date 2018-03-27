@@ -1,0 +1,24 @@
+<h1> Current hometowns: </h1>
+
+<table> 
+	<thead>
+		<th>City Name</th>
+		<th>State Name</th>
+		<th>Population</th>
+	</thead>
+	<tbody>
+		{{#each hometown}}
+		<tr>
+			<td>{{city_name}}</td>
+			<td>{{state_name}}</td>
+			<td>{{population}}</td>
+		</tr>
+		{{/each}}
+	</tbody>
+	<form id="addHometown" action="/hometown" method="post">
+	City Name: <input type="text" name="city_name"><br>
+	State Name: <input type="text" name="state_name"><br>
+	Population: <input type="number" name="population"><br>
+	<input type="submit" value="Submit">
+	</form>
+</table>   

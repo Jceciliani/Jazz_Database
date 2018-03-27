@@ -1,0 +1,29 @@
+<h1> Current People and their Genres </h1>
+
+<table>
+	<thead>
+		<th> Era Name </th>
+		<th> Musician Name </th>
+	</thead>
+	<tbody>
+		{{#each play_in}}
+		<tr>
+			<td>{{Genres}}</td>
+			<td>{{Musicians}}</td>
+		</tr>
+		{{/each}}
+	</tbody>
+	<form id="addPlay_In" action="/play_in" method="post">
+	Era Name: <select name="gid">
+		{{#each genres}}
+		<option value="{{genres_id}}">{{era}}</option>
+		{{/each}}
+	</select><br>
+	Musician Name: <select name="pid">
+		{{#each people}}
+		<option value="{{people_id}}">{{first_name}} {{last_name}}</option>
+		{{/each}}
+	</select><br>
+	<input type="submit" value="Submit">
+	</form>
+</table>	 

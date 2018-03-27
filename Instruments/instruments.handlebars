@@ -1,0 +1,21 @@
+<h1> Current Instruments: </h1>
+
+<table>
+	<thead>
+		<th>Instrument</th>
+	</thead>
+	<tbody>
+		{{#each instruments}}
+		<tr>
+			<td> {{name}}</td>
+		</tr>
+		{{/each}}
+	</tbody>
+	<form id="addInstruments" action="/instruments" method="post">
+	Instrument Name: <input type="text" name="name"><br>
+	<input type="submit" value="Submit">
+	</form>
+</table>			
+	
+		
+	
